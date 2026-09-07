@@ -1,0 +1,73 @@
+{
+  "project_name": "OnEye — Real-Time CCTV Anomaly & Crime Detection Platform",
+  "theme": "Dark Red-Black Command Center (Tactical Surveillance Ops)",
+  "emotional_archetype": "The Performance Pro / Tactical Surveillance Command",
+  "typography": {
+    "font_family_heading": "Chivo, Outfit, sans-serif",
+    "font_family_body": "Inter, DM Sans, sans-serif",
+    "font_family_mono": "JetBrains Mono, Fira Code, monospace",
+    "hierarchy": {
+      "hero_title": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase",
+      "section_heading": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight uppercase text-zinc-100",
+      "card_heading": "text-lg sm:text-xl font-semibold tracking-wide text-zinc-100",
+      "body_text": "text-sm sm:text-base leading-relaxed text-zinc-300",
+      "mono_label": "text-xs font-mono uppercase tracking-[0.2em] text-red-500/90 font-medium"
+    }
+  },
+  "colors": {
+    "background_base": "#09090b",
+    "background_surface": "#121215",
+    "background_card": "#18181b",
+    "background_card_elevated": "#27272a",
+    "border_subtle": "#27272a",
+    "border_highlight": "rgba(239, 68, 68, 0.3)",
+    "primary_red": "#ef4444",
+    "primary_red_hover": "#dc2626",
+    "primary_red_active": "#b91c1c",
+    "alert_crimson": "#dc2626",
+    "alert_pulse_bg": "rgba(239, 68, 68, 0.15)",
+    "success_emerald": "#10b981",
+    "warning_amber": "#f59e0b",
+    "info_blue": "#3b82f6",
+    "text_primary": "#f4f4f5",
+    "text_secondary": "#a1a1aa",
+    "text_muted": "#71717a",
+    "text_red_accent": "#f87171"
+  },
+  "responsive": {
+    "breakpoint": "Mobile-First (xs: 375px, sm: 640px, md: 768px, lg: 1024px, xl: 1280px)",
+    "layout": {
+      "mobile": "Single column vertical stack, collapsible sidebar or slide-over drawer navigation, sticky top tactical status bar with alert ticker, max image height 80vh",
+      "desktop": "Sidebar navigation + Top status nav + Multi-pane command grid (Live Feeds, Incident Map, Alert Queue, Analytical Widgets)"
+    },
+    "overflow_guard": "Use `overflow-x-hidden w-full max-w-full` on top containers; grid and flex children use `min-w-0` to avoid viewport blowing on small screens",
+    "tap_targets": "Minimum 44px height/width for buttons, links, icon toggles, and status markers on touch viewports"
+  },
+  "layout_patterns": {
+    "landing_page": "High-impact storytelling hero with camera visual background + live anomaly detection demo preview + stat grid + role login CTAs + interactive mission timeline",
+    "police_dashboard": "Command center view with split-pane layout: Live Alert Feed with Red Pulsing overlay on left, Interactive Map & Clip Player details on right, Action Triage bar (Acknowledge/Respond/Resolve/False Positive)",
+    "admin_dashboard": "Global oversight grid: Live Camera Network Map + Contributor Approval Queue cards + Station Dispatch Manager + System-wide Analytics (Shadcn/Recharts) + Emergency Override",
+    "contributor_dashboard": "Citizen Portal: Camera Submission Form (Interactive Map Pin + RTSP/Video Upload) + Active Stream Status List + Personal Safety Score & Community Leaderboard"
+  },
+  "component_guidelines": {
+    "live_feed_grid": "Grid of camera cards with status badge ('LIVE' in green / 'ALERT DETECTED' in pulsing red), camera metadata overlay, bounding box HUD visualizers, click-to-expand clip modal",
+    "alert_detail_modal": "Embedded video clip player with frame scrubbing, AI detection tags (e.g. 'Weapon Detected - 98% confidence'), location map snippet, incident timeline, and instant dispatch action buttons",
+    "tactical_cards": "Dark zinc surface (#18181b) with 1px border (#27272a or red highlight), corner HUD accents, clear contrast data labels",
+    "toast_notifications": "Pulsing red alert banners via Sonner with emergency siren micro-animation and one-click 'View Incident' quick action"
+  },
+  "image_urls": {
+    "hero_surveillance_room": "https://images.unsplash.com/photo-1708807472445-d33589e6b090?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMGNvbW1hbmQlMjBjZW50ZXIlMjBjb250cm9sJTIwcm9vbXxlbnwwfHx8fDE3ODg3NTA2MTB8MA&ixlib=rb-4.1.0&q=85",
+    "cctv_night_street": "https://images.unsplash.com/photo-1702682502494-3891f9e3ec59?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHw0fHxjY3R2JTIwc3VydmVpbGxhbmNlJTIwY2FtZXJhJTIwY2l0eSUyMG5pZ2h0fGVufDB8fHx8MTc4ODc1MDYxMHww&ixlib=rb-4.1.0&q=85",
+    "police_patrol_car": "https://images.unsplash.com/photo-1606022831434-91293aebf25a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxwb2xpY2UlMjBvZmZpY2VyJTIwbmlnaHQlMjBjaXR5JTIwcGF0cm9sfGVufDB8fHx8MTc4ODc1MDYxMHww&ixlib=rb-4.1.0&q=85",
+    "command_center_monitors": "https://images.unsplash.com/photo-1652145595413-0a79398e5888?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxzZWN1cml0eSUyMGNvbW1hbmQlMjBjZW50ZXIlMjBjb250cm9sJTIwcm9vbXxlbnwwfHx8fDE3ODg3NTA2MTB8MA&ixlib=rb-4.1.0&q=85",
+    "cctv_camera_pole": "https://images.unsplash.com/photo-1718030361987-d00c9504d1a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHszfHxjY3R2JTIwc3VydmVpbGxhbmNlJTIwY2FtZXJhJTIwY2l0eSUyMG5pZ2h0fGVufDB8fHx8MTc4ODc1MDYxMHww&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the Dark Red-Black command center visual theme throughout all views and role dashboards.",
+    "Ensure every interactive element (buttons, tabs, inputs, alert status toggles, video playback controls) includes explicit `data-testid` attributes (e.g. data-testid='alert-ack-button').",
+    "Build clean role switching via Top Nav / Login modal allowing persistent state for Police, Admin, and Contributor users.",
+    "Provide responsive mobile layouts: on mobile, collapse sidebar into a mobile drawer, convert tables to touch-friendly card stacks, and ensure video clips fit screen dimensions with max 80vh limit.",
+    "Utilize Sonner for red-pulsing tactical alerts when new crime/anomaly incidents occur.",
+    "Ensure no text overlaps translucent backgrounds; header must use solid dark slate/zinc (#09090b with backdrop blur) with subtle red border."
+  ]
+}
