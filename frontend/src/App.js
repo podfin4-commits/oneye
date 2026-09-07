@@ -54,5 +54,55 @@ function App() {
 }
 
 export default App;
+import "@/App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
+import { AuthProvider, useAuth } from "@/context/AuthContext";
+import Landing from "@/pages/Landing";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import PoliceDashboard from "@/pages/PoliceDashboard";
+import AdminDashboard from "@/pages/AdminDashboard";
+import ContributorDashboard from "@/pages/ContributorDashboard";
+
+const RoleRoute = ({ role, children }) => {
+  const { user } = useAuth();
+  if (!user) return <Navigate to="/login" replace />;
+  if (user.role !== role) return <Navigate to={`/${user.role}`} replace />;
+  return children;
+};
+
+function App() {
+  return (
+    <div className="App">
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/police/*" element={<RoleRoute role="police"><PoliceDashboard /></RoleRoute>} />
+            <Route path="/admin/*" element={<RoleRoute role="admin"><AdminDashboard /></RoleRoute>} />
+            <Route path="/contributor/*" element={<RoleRoute role="contributor"><ContributorDashboard /></RoleRoute>} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+          <Toaster
+            position="top-right"
+            theme="dark"
+            toastOptions={{
+              style: {
+                background: '#18181b',
+                border: '1px solid rgba(239, 68, 68, 0.3)',
+                color: '#f4f4f5',
+              },
+            }}
+          />
+        </BrowserRouter>
+      </AuthProvider>
+    </div>
+  );
+}
+
+export default App;
 
 
